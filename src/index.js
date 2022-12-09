@@ -4,14 +4,14 @@ import "./index.css";
 import App from "./routes/home/App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import ErrorPage from "./routes/errors/error-page";
 import Posts from "./routes/posts/Posts";
 import ShowPost from "./routes/post/ShowPost";
 import About from "./routes/about/about";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/blog",
     element: <App />,
