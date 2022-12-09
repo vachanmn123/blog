@@ -1,0 +1,18 @@
+.posts-div {
+    color: white;
+    margin-top: 3vh;
+}
+
+h1 {
+    margin-bottom: 3vh;
+}
+
+table {
+    padding: 2ch;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #800080;
+  background-blend-mode: lighten;
+  color: white;
+}
