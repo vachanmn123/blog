@@ -28,7 +28,7 @@ export default function PostRow(id) {
         <Link to={`post/${id.id}`}>{post.title}</Link>
       </td>
       <td>{post.Authors.join(", ")}</td>
-      <td>{new Date(post.date * 1000).toDateString()}</td>
+      <td>{new Date(post.date).toDateString()}</td>
     </tr>
   );
 }

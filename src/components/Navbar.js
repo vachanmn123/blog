@@ -12,7 +12,7 @@ function NavBar() {
       style={{ backgroundColor: "#800080" }}
     >
       <Container fluid>
-        <Link className="navbar-brand" to={""}>
+        <Link className="navbar-brand" to={"/"}>
           The Vachan MN Blog
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -22,10 +22,10 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link className="nav-link" to={""}>
+            <Link className="nav-link" to={"/"}>
               Home
             </Link>
-            <Link className="nav-link" to={"about"}>
+            <Link className="nav-link" to={"/about"}>
               About
             </Link>
           </Nav>

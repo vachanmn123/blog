@@ -2,9 +2,10 @@ import "./App.css";
 import NavBar from "../../components/Navbar";
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Footer";
-import { Outlet } from "react-router-dom";
+import { HashRouter, Outlet, Route } from "react-router-dom";
+import Posts from "../posts/Posts";
 
-function App() {
+function App({ component }) {
   return (
     <div className="App">
       <Helmet>
@@ -12,7 +13,7 @@ function App() {
         <meta charSet="utf-8" />
       </Helmet>
       <NavBar />
-      <Outlet />
+      {component}
       <Footer />
     </div>
   );

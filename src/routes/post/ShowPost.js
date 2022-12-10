@@ -38,7 +38,7 @@ export default function ShowPost() {
       <h1>{post.title}</h1>
       <hr />
       <p>Written By: {post.Authors.join(", ")}</p>
-      <p>Date: {new Date(post.date * 1000).toDateString()}</p>
+      <p>Date: {new Date(post.date).toDateString()}</p>
       <hr />
       <PostContent post={post} />
     </div>

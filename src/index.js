@@ -4,7 +4,13 @@ import "./index.css";
 import App from "./routes/home/App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createHashRouter,
+  HashRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 import ErrorPage from "./routes/errors/error-page";
 import Posts from "./routes/posts/Posts";
 import ShowPost from "./routes/post/ShowPost";
@@ -34,7 +40,16 @@ const router = createHashRouter([
 ]);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <HashRouter basename="/">
+      <Routes>
+        <Route path="/" element={<App component={<Posts />} />} />
+        <Route
+          path="/post/:postid"
+          element={<App component={<ShowPost />} />}
+        />
+        <Route path="/about" element={<App component={<About />} />} />
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 
